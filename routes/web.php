@@ -13,6 +13,10 @@
 
 Route::get('/', 'ListingsController@index');
 
+Route::get('/description', function(){
+    return view('description');
+});
+
 Auth::routes();
 Route::resource('listings', 'ListingsController');
 Route::get('/dashboard', 'DashboardController@index');
